@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/call.css">
+    <title>Modal Call</title>
+</head>
+
+<body>
+    <button class="btn btn__medium show--call"></button>
+
+    <dialog class="modal call">
+        <!-- Dont forget to add block class="btn" -->
+        <div class="modal__form-title-wrapper">
+            <button class="btn btn__medium btn__medium--close modal__btn-close"></button>
+            <div class="title-wrapper">
+                <h1 class="call__title">Заказать звонок</h1>
+            </div>
+        </div>
+        <form method="dialog" class="modal__form call__form">
+            <div class="modal__form-top">
+                <input type="tel" placeholder="Телефон" name="tel" id="tel" class="modal__form-input" autofocus
+                    required>
+            </div>
+            <div class="modal__form-bottom">
+                <legend>Нажимая <q>отправить</q>, вы даете согласие на <a href="">обработку персональных данных</a> и
+                    соглашаетесь с нашей <a href="">политикой конфиденциальности</a></legend>
+                <button class="btn btn__large btn__large--send  modal__form-submit" type="submit"></button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="call.js"></script>
+
+</body>
+
+</html>

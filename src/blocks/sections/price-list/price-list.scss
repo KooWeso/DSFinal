@@ -1,0 +1,89 @@
+@use '../../../scss/var';
+@use '../../../scss/resets';
+@use '../../../scss/clrs';
+@use '../../../scss/fonts';
+@use '../../../scss/btns';
+@use '../../../scss/section';
+@import '/src/assets/font/style-font.css';
+
+
+@mixin pseudoStl ($content) {
+    content: $content;
+    font-family: var.$f-med, monospace;
+    font-size: 14px;
+    color: clrs.$clr-text-legend;
+    display: block;
+}
+
+.price-list {
+
+    &__card-wrapper {
+        gap: 1rem;
+        @media (min-width: 768px) {
+            grid-template-columns: none;
+            gap: 0;
+            background-color: #fff;
+            border-radius: 6px;
+        }
+    }
+    
+    &__card {
+        height: 12.5rem;
+        border: none;
+        padding-block: 1rem;
+
+        @media (min-width: 768px) {
+            padding-block: 1rem;
+            height: auto;
+            display: grid;
+            grid-template-columns: 4fr 1fr 2.3fr;
+            align-items: center;
+        }
+
+        & div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__card-service {
+            &::before {
+                @include pseudoStl('Ремонтные услуги');
+            }
+        }
+
+        &__card-price {
+            &::before {
+                @include pseudoStl('Цена');         
+            }
+        }
+
+        &__card-time {
+            &::before {
+                @include pseudoStl('Срок');
+            }
+        }
+    }
+    
+    .text {
+        display: none;
+        @media (min-width: 768px) {
+            color: clrs.$clr-text-legend;
+            display: grid;
+            grid-template-columns: 4fr 1fr 2.3fr;
+            padding: 0 1rem;
+        }
+        
+    }
+
+    &__bottom {
+
+        &>button {
+        display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+}

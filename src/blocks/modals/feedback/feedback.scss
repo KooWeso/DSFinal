@@ -1,0 +1,11 @@
+@use '../../../scss/var';
+@use '../../../scss/resets';
+@use '../../../scss/clrs';
+@use '../../../scss/fonts';
+@use '../../../scss/btns';
+@use '../../../scss/modal';
+@import '/src/assets/font/style-font.css';
+
+.show {
+    @include btns.btnGet(btns.$btn-medium, 'call');
+}

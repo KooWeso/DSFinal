@@ -1,0 +1,19 @@
+@use '../../../scss/var';
+@use '../../../scss/resets';
+@use '../../../scss/clrs';
+@use '../../../scss/fonts';
+@use '../../../scss/btns';
+@use '../../../scss/section';
+@import '/src/assets/font/style-font.css';
+
+.brands {
+    &__card {
+        height: 4.5rem;
+        padding-block: 1rem;
+        align-items: center;
+
+        img {
+            display: block;
+        }
+    }
+}

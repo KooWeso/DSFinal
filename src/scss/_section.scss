@@ -1,0 +1,60 @@
+@use 'var';
+@use 'clrs';
+
+.swiper-wrapper.swiper-wrapper.swiper-wrapper {
+    // margin-inline: calc(var.$padding * -1);
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, auto));
+            gap: 1rem;
+            column-gap: var.$padding;
+            margin-inline: 0;
+        }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: var.$padding;
+
+    &__content {
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__card-wrapper {
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, auto));
+            gap: 1rem;
+            column-gap: var.$padding;
+            margin-inline: 0;
+        }
+    }
+
+    &__card {
+        background: #fff;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid clrs.$clr-input-border;
+        border-radius: 6px;
+        // flex-wrap: wrap;
+        // gap: 1rem;
+    }
+
+    &__pagination {
+        --swiper-theme-color: #B5B6BC;
+        position: relative !important;
+        translate: 0 1.5rem;
+        scale: 2 2;
+        padding-bottom: 1rem;
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+}
